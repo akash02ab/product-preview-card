@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --dark-cyan-hover: hsl(158, 36%, 27%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  padding: 24px;
+  width: 100%;
+  min-height: 100vh;
+  height: auto !important;
+  position: relative;
+  overflow-y: auto;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (max-width: 640px) {
+    justify-content: flex-start;
+  }
+}
+
+.sm {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .lg {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+}
+
+main {
+  max-width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+main>picture {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+main>picture>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+
+  @media screen and (max-width: 640px) {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+main>article {
+  flex: 0.78;
+  background-color: var(--white);
+  border-radius: 0 10px 10px 0;
+  padding: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  @media screen and (max-width: 640px) {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+main>article>span {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.6ch;
+  font-size: 12px;
+}
+
+main>article>h1 {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--dark-blue);
+}
+
+main>article>p {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.05ch;
+  line-height: 1.6;
+  color: var(--grayish-blue);
+}
+
+main>article>div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+main>article>div>span {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+
+main>article>div>s {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grayish-blue);
+}
+
+main>article>button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--dark-cyan);
+  padding: 16px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--dark-cyan-hover);
+  }
+}
+
+footer {
+  color: var(--dark-cyan);
+  font-weight: 500;
+  text-align: center;
+  margin: 16px 0;
+}
